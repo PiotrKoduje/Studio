@@ -48,7 +48,7 @@ body{
 
 /*Header*/
 .splash{
-    .container{
+    .container-fluid{
         min-height: 600px;
         background-image: url('../images/splash.jpg');
         background-size: cover;
@@ -152,7 +152,7 @@ body{
 .services{
     color: $background-color-dark;
 
-    .container{
+    .container-fluid{
         padding: 90px 0;
         min-height: 400px;
         background-color: white;
@@ -164,28 +164,8 @@ body{
             .row{
                 margin-top: 60px;
                 
-                .col-md-4{
+                .col-custom{
                     text-align: center;
-
-                    .circle{
-                        border: 3px solid $color-main;
-                        width: 80px;
-                        height: 80px;
-                        border-radius: 40px;
-                        margin: 0 auto;
-                        transition: all .3s;
-
-                        i{
-                            font-size: 35px; 
-                            line-height: 80px;
-                            color: $color-main;
-                        }
-
-                        &:hover{
-                            transform: scale(1.1);
-                            cursor: pointer;
-                        }
-                    }
 
                     h4{
                         font-family: $font-header;
@@ -203,13 +183,33 @@ body{
             } 
         }     
     }
+
+    .circle{
+        border: 3px solid $color-main;
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin: 0 auto;
+        transition: all .3s;
+
+        .icon{
+            font-size: 35px; 
+            line-height: 80px;
+            color: $color-main;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
 }
 
 /*Our-portfolio*/
 .our-portfolio{
     color: $background-color-dark;
 
-    .container{
+    .container-fluid{
         padding: 90px 0;
         min-height: 400px;
         background-color: #eee;
@@ -218,131 +218,133 @@ body{
             width: 80%;
             margin: 0 auto;
 
-            .row{
-                margin-top: 60px;
+            
+        }
+    }
 
-                .box{
-                    position: relative;
-                    height: 400px;
-                    background-color: white;
+    .row{
+        margin-top: 60px;
 
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0,0,0,.2);
-                        transition: all .3s;
-                    }
-                    
-                    &:hover::before{
-                        background-color: transparent;
-                        cursor: pointer;
-                    }
-                }
+        .box{
+            position: relative;
+            height: 400px;
+            background-color: white;
 
-                .box-image{
-                    height: 75%;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.2);
+                transition: all .3s;
+            }
+            
+            &:hover::before{
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
 
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
+        .box-image{
+            height: 75%;
 
-                .box-description{
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: center;
-                    align-items: center;
-                    height: 25%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
 
-                    h2{
-                        font-family: $font-header;
-                    }
+        .box-description{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 25%;
 
-                    p{
-                        font-style: italic;
-                        margin-top: 5px;
-                        color: $color-second;
-                    }
-                }
+            h2{
+                font-family: $font-header;
+            }
+
+            p{
+                font-style: italic;
+                margin-top: 5px;
+                color: $color-second;
             }
         }
     }
 }
 
 /*Footer*/
-footer{
+.main-footer{
     color: $background-color-dark;
 
-    .container{
+    .container-fluid{
         padding: 20px 0;
         background-color: white;
 
         .wrapper{
             width: 80%;
             margin: 0 auto;
-
-            .row{
-                margin-top: 10px;
-                display: flex;
-
-                .col-lg-6{
-                    text-align: center;
-                    height: 40px;
-
-                    p{
-                        line-height: 40px;
-                        font-family: $font-header;
-                    }
-
-                    i{
-                        display: inline-block;
-                        line-height: 40px;
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 20px;
-                        font-size: 20px;
-                        background-color: $background-color-dark;
-                        color: white;
-                        margin-right: 5px;
-                        margin-left: 5px;
-                        transition: all .3s;
-
-                        &:hover{
-                            cursor: pointer;
-                            transform: scale(1.1);
-                        }
-
-                        &:nth-child(1):hover{
-                            background-color: #00acee;
-                        }
-
-                        &:nth-child(2):hover{
-                            background-color: #3b5998;
-                        }
-
-                        &:nth-child(3):hover{
-                            background-color: #E60023;
-                        }
-
-                        &:nth-child(4):hover{
-                            background-color: #DB4437;
-                        }
-
-                    }
-                }
-            }
         }
+    }
+
+    .row{
+        margin-top: 10px;
+        display: flex;
+
+        .col-custom{
+            text-align: center;
+            height: 40px;
+
+            p{
+                line-height: 40px;
+                font-family: $font-header;
+            }  
+        }
+    }
+
+    .icon{
+        display: inline-block;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: $background-color-dark;
+        color: white;
+        margin-right: 5px;
+        margin-left: 5px;
+        transition: all .3s;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        &:nth-child(1):hover{
+            background-color: #00acee;
+        }
+
+        &:nth-child(2):hover{
+            background-color: #3b5998;
+        }
+
+        &:nth-child(3):hover{
+            background-color: #E60023;
+        }
+
+        &:nth-child(4):hover{
+            background-color: #DB4437;
+        }
+
     }
 }
 
 /*Media*/
 @media (max-width: 992px){
     .splash{
-        .container{
+        .container-fluid{
             .splash-inner{
                 p{
                     font-size: 25px;
@@ -364,7 +366,7 @@ footer{
     }
 
     .services{
-        .container{
+        .container-fluid{
             padding: 70px;
 
             .wrapper{
@@ -398,7 +400,7 @@ footer{
 
 @media (max-width: 768px){
     .splash{
-        .container{
+        .container-fluid{
             .splash-inner{
                 p{
                     font-size: 20px;
@@ -416,7 +418,7 @@ footer{
     }
 
     .services{
-        .container{
+        .container-fluid{
             padding: 60px;
 
             .wrapper{
@@ -432,7 +434,7 @@ footer{
 
 @media (max-width: 576px){
     .splash{
-        .container{
+        .container-fluid{
             .splash-inner{
                 margin-top: 100px;
 
@@ -453,7 +455,7 @@ footer{
     }
 
     .services{
-        .container{
+        .container-fluid{
             padding: 40px;
 
             .wrapper{
